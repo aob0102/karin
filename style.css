@@ -298,10 +298,13 @@ img {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
+  transition: opacity 0.3s ease;
 }
 
 .map-container.versteckt {
   display: none;
+  pointer-events: none;
+  height: 0; /* wichtig für Safari */
 }
 
 /*Specific request Section*/
