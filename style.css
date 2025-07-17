@@ -302,9 +302,10 @@ img {
 }
 
 .map-container.versteckt {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
   pointer-events: none;
-  height: 0; /* wichtig für Safari */
 }
 
 /*Specific request Section*/

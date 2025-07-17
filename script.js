@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 mapDiv.dataset.initialized = 'true';
                 console.log("Map initialized after button click.");
+
+                setTimeout(() => {
+                    google.maps.event.trigger(mapInstance, 'resize');
+                    mapInstance.setCenter(location);
+                }, 300);
+                
             } else if (mapDiv.dataset.initialized === 'true' && mapInstance) {
                 // Wenn die Karte bereits initialisiert war und nur versteckt/angezeigt wurde
                 if (!mapDiv.classList.contains('versteckt')) { // Nur resizen, wenn sie sichtbar wird
