@@ -1,14 +1,5 @@
 // script.js
 
-// 1. Definiere initMap() GLOBAL!
-// Diese Funktion wird von der Google Maps API aufgerufen, sobald sie geladen ist.
-// Sie muss im globalen Geltungsbereich sein, damit der `callback=initMap`-Parameter funktioniert.
-function initMap() {
-    // Setze ein globales Flag, dass die API geladen ist.
-    // Die eigentliche Karteninitialisierung erfolgt weiterhin beim Klick auf den Button.
-    window.googleMapsApiLoaded = true; // Verwende window. für globale Zugänglichkeit
-    console.log("Google Maps API loaded successfully by initMap callback.");
-}
 
 // 2. Deine anderen globalen Variablen
 let mapInstance = null;

@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+        // Definiere initMap() GLOBAL im HTML, BEVOR die Google Maps API geladen wird
+        function initMap() {
+            window.googleMapsApiLoaded = true;
+            console.log("Google Maps API loaded successfully by initMap callback.");
+        }
+    </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXb_OxjPuefIZpwJ9a_k4jQX4wDZ4u29Q&callback=initMap"></script>
 </head>
 <body>
