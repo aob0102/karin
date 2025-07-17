@@ -1,0 +1,507 @@
+:root {
+  --main-bg: #ffffff;
+  --primary: #e0b0d0; /* Weiches Rosa */
+  --primary-light: #f7eaf0; /* Sehr helles Rosa */
+  --text-color: #4a4a4a;
+  --accent: #a87c96; /* Mauve Akzent */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+/* Grundlegendes */
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--main-bg);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.promo-banner {
+  background: linear-gradient(270deg, 
+    #9ec5e7, 
+    #c5b8e0, 
+    #e4a9c5, 
+    #c5e1a5, 
+    #f6e27f, 
+    #9ec5e7);
+  background-size: 1200% 1200%;
+  animation: gradientPulse 15s ease infinite;
+  color: #3a3a3a; /* dunkle Schrift für bessere Lesbarkeit */
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  user-select: none;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+@keyframes gradientPulse {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- HEADER --- */
+/* --- HEADER --- */
+
+/* Wir verwenden die Farben des Logos für den Hintergrund */
+/* Wir verwenden die Farben des Logos für den Hintergrund */
+.header-container {
+  /* Gradient basierend auf: #9ec5e7, #c5b8e0, #e4a9c5, #c5e1a5, #f6e27f */
+  background: linear-gradient(135deg, #f7eaf0, #e4a9c5, #c5b8e0, #9ec5e7);
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 1rem 2rem; 
+  border-bottom: 2px solid var(--primary);
+  text-align: center;
+}
+
+.header-center {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  /* Das Logo bleibt etwas kleiner für einen kompakteren Header */
+  height: 400px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  margin-bottom: 0.5rem;
+}
+
+.logo:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* Entfernen der alten Header-Claims-Styles */
+.header-side, .header-claim, .header-text, .header-claims-bar, .header-claims-playful {
+    display: none; 
+}
+
+/* --- Haupt-Slogan (H1) --- */
+.header-slogan {
+  /* Wir verwenden die eleganteste Schriftart der Seite */
+  font-family: var(--font-heading);
+  font-size: 2.5rem; 
+  font-weight: 500;
+  color: var(--accent); /* Dezente Farbe für den Slogan */
+  margin-top: 1rem;
+  
+  /* Verspielter Akzent: Leichte Neigung für einen dynamischen Effekt */
+  transform: skew(-5deg); 
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.header-slogan:hover {
+  transform: skew(0deg); /* Richtet den Slogan beim Hover gerade aus */
+}
+
+/* Verspieltes Element mit Pseudo-Element (z.B. ein kleines Herz) */
+.header-slogan::before {
+    content: "♡"; /* Sie können dies durch ein anderes verspieltes Symbol ersetzen */
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: -2rem;
+    top: -0.5rem;
+    opacity: 0.9;
+}
+
+/* Zusätzliche Anpassung für mobile Ansicht */
+@media (max-width: 768px) {
+  .header-slogan {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.005);
+}
+
+/* --- USP SECTION --- */
+.usp-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.usp-item {
+  flex: 1 1 280px;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--main-bg);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usp-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.usp-item h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.usp-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* --- CONTACT INFO SECTION --- */
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  background-color: var(--primary-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.info-block {
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-block h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.info-block p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-block p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+#map-button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+#map-button:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.map-container.versteckt {
+  display: none;
+}
+
+/*Specific request Section*/
+
+/* --- BEREICH FÜR SPEZIFISCHE ANFRAGEN --- */
+.specific-request-section {
+  background-color: var(--primary); /* Nutzen Sie Ihre Hauptfarbe für einen markanten Look */
+  color: var(--main-bg); /* Weißer Text für besseren Kontrast */
+  padding: 4rem 1.5rem;
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.specific-request-content h2 {
+  color: var(--main-bg); /* Stellen Sie sicher, dass die Überschrift weiß ist */
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.specific-request-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.specific-request-content .button {
+  display: inline-block;
+  background-color: var(--accent); /* Eine kontrastierende Akzentfarbe für den Button */
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none; /* Entfernen Sie den Standard-Button-Rand, da wir einen eigenen Stil haben */
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.specific-request-content .button:hover {
+  background-color: #8c6a7e; /* Leicht dunklerer Akzent beim Hover */
+  transform: translateY(-3px);
+}
+
+/* Responsive Anpassungen für den neuen Bereich */
+@media (max-width: 768px) {
+  .specific-request-content h2 {
+    font-size: 2.2rem;
+  }
+  .specific-request-content p {
+    font-size: 1.1rem;
+  }
+  .specific-request-content .button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .specific-request-section {
+    padding: 3rem 1rem;
+  }
+  .specific-request-content h2 {
+    font-size: 1.8rem;
+  }
+}
+/* --- FOOTER --- */
+.main-footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  padding: 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-socials img {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 0.7;
+}
+
+.main-footer p {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+
+.legal-content {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.legal-content h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+
+/* --- RESPONSIVE --- */
+@media (min-width: 768px) {
+  .header-container {
+    flex-wrap: nowrap;
+  }
+
+  .header-side {
+    text-align: left;
+  }
+
+  .header-side:last-child {
+    text-align: right;
+  }
+
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+  }
+
+  .hero-text {
+    padding: 3rem;
+    text-align: left;
+  }
+
+  .hero-text h2 {
+    font-size: 3rem;
+  }
+
+  .contact-info-section {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 0;
+  }
+
+  .info-block {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 150px;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .usp-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .info-block h2 {
+    font-size: 1.8rem;
+  }
+
+  .info-block p {
+    font-size: 1rem;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
