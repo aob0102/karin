@@ -2,88 +2,281 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Entdecken Sie Karin – Mode für Kinder in Rankweil. Hochwertige, liebevoll ausgewählte Kindermode von der Geburt bis zum 12. Geburtstag. Jetzt vorbeischauen!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Karin – Mode für Kinder in Rankweil. Liebevoll ausgewählte Kindermode von der Geburt bis zum 12. Geburtstag. Persönliche Beratung, festliche Mode & mehr." />
     <title>Karin – Mode für Kinder | Rankweil</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="./images/test2.png" type="image/png">
-    <script>
-        // Definiere initMap() GLOBAL im HTML, BEVOR die Google Maps API geladen wird
-        function initMap() {
-            window.googleMapsApiLoaded = true;
-            console.log("Google Maps API loaded successfully by initMap callback.");
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXb_OxjPuefIZpwJ9a_k4jQX4wDZ4u29Q&callback=initMap"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-      <header class="header-container">
-        <div class="header-center">
-            <img src="images/logo.png" alt="Logo" class="logo" />
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Startseite">
+                <img src="images/logo.png" alt="Karin – Mode für Kinder" />
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#sortiment">Sortiment</a></li>
+                <li><a href="#groessenberater">Größenberater</a></li>
+                <li><a href="#kontakt">Kontakt &amp; Zeiten</a></li>
+                <li><a href="#anfrage">Anfrage</a></li>
+                <li class="nav-cta"><a href="#kontakt" class="btn btn-primary">Besuchen Sie uns</a></li>
+            </ul>
         </div>
-        <h2 class="header-slogan">Mode für kleine Persönlichkeiten</h2>
-    </header>
+    </nav>
+
+    <!-- Sommer-Hinweis (wird per JS automatisch nur bis 13.09.2026 angezeigt) -->
+    <div class="info-banner" id="info-banner" hidden>
+        <a href="#kontakt">☀️ Sommeröffnungszeiten &amp; Betriebsurlaub – jetzt Details ansehen</a>
+    </div>
+
     <main>
-        <section class="hero-section">
+        <!-- ===== HERO ===== -->
+        <header class="hero">
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+            <div class="hero-blob blob-3"></div>
+
             <div class="hero-text">
-                <h1>Liebevoll ausgesuchte Kindermode in Rankweil</h1>
-                <p>Entdecken Sie eine Welt voller Stil und Komfort für Ihre Kleinen. Bei uns finden Sie ausgewählte Kollektionen, die Kinderaugen zum Leuchten bringen.</p>
+                <span class="hero-badge">✨ Ihr Kindermode-Fachgeschäft in Rankweil</span>
+                <h1>Mode für <em>kleine Persönlichkeiten</em></h1>
+                <p>Liebevoll ausgesuchte Kindermode von der Geburt bis zum 12. Geburtstag – für den Alltag, große Abenteuer und die ganz besonderen Momente.</p>
+                <div class="hero-actions">
+                    <a href="#sortiment" class="btn btn-primary">Sortiment entdecken</a>
+                    <a href="#anfrage" class="btn btn-outline">Anfrage senden</a>
+                </div>
             </div>
-            <img src="images/inside_view.png" alt="Innenansicht des Geschäfts Karin – Mode für Kinder" class="hero-image" />
+
+            <figure class="hero-figure reveal">
+                <img src="images/inside_view.png" alt="Innenansicht des Geschäfts Karin – Mode für Kinder" />
+                <div class="hero-sticker">
+                    <span class="dot" id="status-dot"></span>
+                    <span id="status-text">Öffnungszeiten prüfen…</span>
+                </div>
+            </figure>
+        </header>
+
+        <!-- ===== USP ===== -->
+        <section class="usp-strip">
+            <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="transform: rotate(180deg); background: transparent;"><path d="M0,32 C360,80 1080,-16 1440,32 L1440,70 L0,70 Z" fill="#fdfaf7"></path></svg>
+            <div class="section" style="padding-top: 2.5rem;">
+                <div class="center">
+                    <span class="section-label reveal">Warum Karin?</span>
+                    <h2 class="section-title reveal">Mit Herz ausgewählt</h2>
+                </div>
+                <div class="usp-grid" style="margin-top: 2rem;">
+                    <article class="usp-card reveal">
+                        <div class="usp-icon">💗</div>
+                        <h3>Mit Liebe ausgesucht</h3>
+                        <p>Jedes Stück wird sorgfältig ausgewählt, um höchste Qualität und kindgerechten Tragekomfort zu gewährleisten.</p>
+                    </article>
+                    <article class="usp-card reveal reveal-delay-1">
+                        <div class="usp-icon">🎉</div>
+                        <h3>Für große Momente gemacht</h3>
+                        <p>Ob Taufe, Erstkommunion oder Familienfest – festliche Looks mit Qualität und Herz, die jeden Moment besonders machen.</p>
+                    </article>
+                    <article class="usp-card reveal reveal-delay-2">
+                        <div class="usp-icon">🌱</div>
+                        <h3>Für jedes Kapitel der Kindheit</h3>
+                        <p>Von der Geburt bis zum 12. Geburtstag – bequem, hochwertig und gemacht, um Abenteuer und besondere Augenblicke stilvoll zu begleiten.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section class="usp-section">
-            <div class="usp-item">
-                <h3>Mit Liebe ausgesucht</h3>
-                <p>Jedes Stück wird sorgfältig ausgewählt, um höchste Qualität und kindgerechten Tragekomfort zu gewährleisten.</p>
+        <!-- ===== SORTIMENT ===== -->
+        <section class="section" id="sortiment">
+            <div class="center">
+                <span class="section-label reveal">Unser Sortiment</span>
+                <h2 class="section-title reveal">Für jedes Alter das Richtige</h2>
+                <p class="section-intro reveal">Vier Welten, ein Anspruch: Mode, die Kinder glücklich macht und Eltern überzeugt.</p>
             </div>
-            <div class="usp-item">
-                <h3>Für große Moment gemacht</h3>
-                <p>Ob Taufe, Erstkommunion oder Familienfest – wir bieten festliche Looks mit Qualität und Herz, die jeden Moment besonders machen.</p>
+            <div class="sortiment-grid">
+                <article class="sort-card sort-baby reveal">
+                    <span class="emoji">🍼</span>
+                    <h3>Baby</h3>
+                    <span class="age">0 – 2 Jahre</span>
+                    <p>Zarte Stoffe und praktische Schnitte für die Allerkleinsten – vom ersten Body bis zum Krabbel-Outfit.</p>
+                </article>
+                <article class="sort-card sort-mini reveal reveal-delay-1">
+                    <span class="emoji">🧸</span>
+                    <h3>Mini</h3>
+                    <span class="age">2 – 6 Jahre</span>
+                    <p>Robust, bequem und verspielt – Mode für Entdecker im Kindergartenalter.</p>
+                </article>
+                <article class="sort-card sort-kids reveal reveal-delay-2">
+                    <span class="emoji">🛹</span>
+                    <h3>Kids</h3>
+                    <span class="age">6 – 12 Jahre</span>
+                    <p>Coole Styles für Schule und Freizeit, die mitwachsen und Persönlichkeit zeigen.</p>
+                </article>
+                <article class="sort-card sort-fest reveal reveal-delay-3">
+                    <span class="emoji">👗</span>
+                    <h3>Festmode</h3>
+                    <span class="age">Besondere Anlässe</span>
+                    <p>Taufe, Erstkommunion, Hochzeit &amp; Feste – elegante Looks für unvergessliche Tage.</p>
+                </article>
             </div>
-            <div class="usp-item">
-                <h3>Für jedes Kapitel der Kindheit</h3>
-                <p>Hochwertige Mode von der Geburt bis zum 12. Geburtstag – liebevoll ausgewählt, bequem zu tragen und gemacht, um Abenteuer, Alltagsmomente und besondere Augenblicke stilvoll zu begleiten. Weil jedes Alter seine eigenen Geschichten schreibt – und das passende Outfit dazu verdient.</p>
+            <!-- TODO: Hier können die geführten Marken eingetragen werden -->
+            <div class="brands-note reveal">
+                Wir führen <strong>ausgewählte Qualitätsmarken</strong> – fragen Sie uns nach den aktuellen Kollektionen oder schauen Sie einfach vorbei. Wir beraten Sie gerne persönlich!
             </div>
         </section>
-        <section class="specific-request-section">
-            <div class="specific-request-content">
+
+        <!-- ===== GRÖSSENBERATER ===== -->
+        <section class="size-section" id="groessenberater">
+            <div class="section">
+                <div class="size-wrap">
+                    <div class="reveal">
+                        <span class="section-label">Interaktiv</span>
+                        <h2 class="section-title">Welche Größe passt?</h2>
+                        <p class="section-intro" style="margin-bottom: 1rem;">Kinder wachsen schnell – unser Größenberater hilft Ihnen, die passende Konfektionsgröße zu finden. Einfach Alter oder Körpergröße wählen.</p>
+                        <p class="section-intro" style="margin-bottom: 0;">Und wenn Sie unsicher sind: Kommen Sie einfach vorbei, wir finden gemeinsam die perfekte Passform. 💕</p>
+                    </div>
+                    <div class="size-tool reveal reveal-delay-1">
+                        <div class="size-tabs" role="tablist">
+                            <button class="size-tab active" id="tab-age" type="button">Nach Alter</button>
+                            <button class="size-tab" id="tab-height" type="button">Nach Körpergröße</button>
+                        </div>
+                        <div class="size-panel" id="panel-age">
+                            <label for="age-slider">Alter: <span class="size-value" id="age-label">2 Jahre</span></label>
+                            <input type="range" class="size-slider" id="age-slider" min="0" max="17" value="7" step="1" />
+                        </div>
+                        <div class="size-panel" id="panel-height" hidden>
+                            <label for="height-slider">Körpergröße: <span class="size-value" id="height-label">92 cm</span></label>
+                            <input type="range" class="size-slider" id="height-slider" min="50" max="152" value="92" step="1" />
+                        </div>
+                        <div class="size-result">
+                            <div class="size-number" id="size-result">92</div>
+                            <p class="size-hint">Empfohlene Konfektionsgröße: <strong id="size-hint-text">Gr. 92 – passt meist mit ca. 2 Jahren.</strong></p>
+                        </div>
+                        <p class="size-disclaimer">Richtwerte nach EU-Größentabelle – jedes Kind wächst anders. Im Zweifel lieber eine Größe größer wählen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA-BAND ===== -->
+        <section class="section" style="padding-bottom: 0;">
+            <div class="cta-band reveal">
                 <h2>Benötigen Sie etwas Bestimmtes?</h2>
-                <p>Gerne berate ich Sie persönlich und helfe Ihnen, das perfekte Outfit für Ihre kleinen Lieblinge zu finden. Ob für besondere Anlässe oder den Alltag – lassen Sie uns gemeinsam Ihre Wünsche besprechen.</p>
-                <a href="#contact-info-section" class="button">Kontaktieren Sie mich</a>
-            </div>
-        </section>
-        <section class="contact-info-section" id="contact-info-section"> <div class="info-block">
-                <h2>Öffnungszeiten</h2>
-                <p>Samstag 04.07.2026 und Samstag 11.07.2026 ganztags geschlossen!</p>
-                <p>Mo – Mi & Fr: 09:00–12:00 und 14:30-18:00 Uhr</p>
-                <p>Do & Sa: 09:00–12:00 Uhr</p>
-            </div>
-            <div class="info-block">
-                <h2>Kontakt & Anfahrt</h2>
-                <p>Ringstraße 44</p>
-                <p>6830 Rankweil</p>
-                <p>Telefon: 05522 / 23810</p>
-                <p>E-Mail: info@karin-kindermode.at</p>
-                <button id="map-button">Karte anzeigen</button>
+                <p>Gerne berate ich Sie persönlich und helfe Ihnen, das perfekte Outfit für Ihre kleinen Lieblinge zu finden – ob für besondere Anlässe oder den Alltag.</p>
+                <div class="cta-actions">
+                    <a href="#anfrage" class="btn btn-primary">Anfrage senden</a>
+                    <a href="tel:+43552223810" class="btn btn-cta-outline">📞 05522 / 23810 anrufen</a>
+                </div>
             </div>
         </section>
 
-        <div id="map" class="map-container versteckt"></div>
+        <!-- ===== KONTAKT & ÖFFNUNGSZEITEN ===== -->
+        <section class="section" id="kontakt">
+            <div class="center">
+                <span class="section-label reveal">Besuchen Sie uns</span>
+                <h2 class="section-title reveal">Kontakt &amp; Öffnungszeiten</h2>
+            </div>
+            <div class="contact-grid" style="margin-top: 2rem;">
+                <div class="contact-card reveal">
+                    <h3>🕐 Öffnungszeiten <span class="status-pill" id="status-pill">…</span></h3>
+                    <table class="hours-table" id="hours-table">
+                        <tbody>
+                            <tr data-day="1"><td>Montag</td><td>09:00–12:00 &amp; 14:30–18:00</td></tr>
+                            <tr data-day="2"><td>Dienstag</td><td>09:00–12:00 &amp; 14:30–18:00</td></tr>
+                            <tr data-day="3"><td>Mittwoch</td><td>09:00–12:00 &amp; 14:30–18:00</td></tr>
+                            <tr data-day="4"><td>Donnerstag</td><td>09:00–12:00</td></tr>
+                            <tr data-day="5"><td>Freitag</td><td>09:00–12:00 &amp; 14:30–18:00</td></tr>
+                            <tr data-day="6"><td>Samstag</td><td>09:00–12:00</td></tr>
+                            <tr data-day="0"><td>Sonntag</td><td>geschlossen</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="notice-box">
+                        <p><strong>☀️ Sommeröffnungszeiten</strong> (13. Juli – 13. September 2026):<br />Montag &amp; Dienstag nachmittags geschlossen (nur 09:00–12:00 geöffnet).</p>
+                        <p><strong>🏖️ Betriebsurlaub:</strong><br />20. – 26. Juli 2026 sowie 19. – 29. August 2026.</p>
+                        <p><strong>Zusätzlich geschlossen:</strong> Samstag, 1. August 2026.</p>
+                    </div>
+                </div>
+                <div class="contact-card reveal reveal-delay-1">
+                    <h3>📍 So finden Sie uns</h3>
+                    <ul class="contact-lines">
+                        <li><span class="ico">🏠</span> Ringstraße 44, 6830 Rankweil</li>
+                        <li><span class="ico">📞</span> <a href="tel:+43552223810">05522 / 23810</a></li>
+                        <li><span class="ico">✉️</span> <a href="mailto:info@karin-kindermode.at">info@karin-kindermode.at</a></li>
+                        <li><span class="ico">📷</span> <a href="https://www.instagram.com/karin_kindermode" target="_blank" rel="noopener">@karin_kindermode</a></li>
+                    </ul>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Ringstra%C3%9Fe+44,+6830+Rankweil" target="_blank" rel="noopener" class="btn btn-outline">Route planen</a>
+                </div>
+            </div>
+            <div class="map-shell reveal" id="map-shell">
+                <div class="map-consent" id="map-consent">
+                    <p>Zum Schutz Ihrer Daten wird die Karte erst nach einem Klick geladen (OpenStreetMap).</p>
+                    <button class="btn btn-primary" id="map-load-btn" type="button">Karte anzeigen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ANFRAGE-FORMULAR ===== -->
+        <section class="section" id="anfrage">
+            <div class="center">
+                <span class="section-label reveal">Persönliche Beratung</span>
+                <h2 class="section-title reveal">Ihre Anfrage</h2>
+                <p class="section-intro reveal">Beschreiben Sie kurz, wonach Sie suchen – ich melde mich so schnell wie möglich bei Ihnen.</p>
+            </div>
+            <form class="form-card reveal" id="contact-form">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="f-name">Ihr Name *</label>
+                        <input type="text" id="f-name" name="name" required autocomplete="name" />
+                    </div>
+                    <div class="form-field">
+                        <label for="f-contact">Telefon oder E-Mail *</label>
+                        <input type="text" id="f-contact" name="contact" required />
+                    </div>
+                    <div class="form-field full">
+                        <label for="f-topic">Worum geht es?</label>
+                        <select id="f-topic" name="topic">
+                            <option>Allgemeine Frage</option>
+                            <option>Festliche Mode (Taufe, Erstkommunion, …)</option>
+                            <option>Bestimmter Artikel / Marke</option>
+                            <option>Geschenkidee</option>
+                            <option>Sonstiges</option>
+                        </select>
+                    </div>
+                    <div class="form-field full">
+                        <label for="f-message">Ihre Nachricht *</label>
+                        <textarea id="f-message" name="message" rows="5" required placeholder="z.B. Ich suche ein festliches Kleid in Gr. 116 für eine Hochzeit im August…"></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Anfrage per E-Mail senden ✉️</button>
+                </div>
+                <p class="form-note">Beim Absenden öffnet sich Ihr E-Mail-Programm mit der fertigen Nachricht an info@karin-kindermode.at – es werden keine Daten über die Website übertragen.</p>
+            </form>
+        </section>
     </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="main-footer">
         <div class="footer-inner">
-          <div class="footer-socials">
-            <a href="https://www.instagram.com/karin_kindermode" target="_blank" aria-label="Instagram">
-              <img src="images/instagram.svg" alt="Instagram" />
-            </a>
-          </div>
-          <p>&copy; 2025 Karin – Mode für Kinder | <a href="impressum.html">Impressum</a></p>
+            <div class="footer-brand">Karin – Mode für Kinder<span>Mode für kleine Persönlichkeiten</span></div>
+            <nav class="footer-links">
+                <a href="#sortiment">Sortiment</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/karin_kindermode" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.1.8.3 1.9.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.4.3-.8.3-1.9.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.1-.8-.3-1.9-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.4-8.4a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+                </a>
+            </div>
         </div>
-      </footer>
+        <div class="footer-copy">&copy; 2026 Karin – Mode für Kinder, Ringstraße 44, 6830 Rankweil</div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
