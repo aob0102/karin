@@ -538,12 +538,14 @@ input[type="range"].size-slider::-moz-range-thumb {
   margin: 0 auto;
 }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-.form-field { display: flex; flex-direction: column; gap: .4rem; }
+.form-field { display: flex; flex-direction: column; gap: .4rem; min-width: 0; }
 .form-field.full { grid-column: 1 / -1; }
 .form-field label { font-weight: 800; font-size: .92rem; }
 .form-field input,
 .form-field select,
 .form-field textarea {
+  width: 100%;
+  min-width: 0;
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--ink);
@@ -662,10 +664,16 @@ input[type="range"].size-slider::-moz-range-thumb {
   .nav-cta { margin: .8rem auto 1.2rem; }
 }
 
+@media (max-width: 640px) {
+  /* Formular früher einspaltig, damit die Felder nicht zu schmal werden */
+  .form-grid { grid-template-columns: 1fr; }
+  .form-card { padding: 1.8rem 1.2rem; }
+  .form-actions .btn { width: 100%; justify-content: center; }
+}
+
 @media (max-width: 540px) {
   .section { padding: 3.2rem 1.2rem; }
   .sortiment-grid { grid-template-columns: 1fr; }
-  .form-grid { grid-template-columns: 1fr; }
   .hero-figure img { aspect-ratio: 4 / 3; }
   .cta-actions .btn { width: 100%; justify-content: center; }
   .footer-inner { flex-direction: column; text-align: center; justify-content: center; }
