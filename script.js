@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // Einzelne zusätzliche Schließtage
-  const CLOSED_DATES = ['2026-08-01'];
+  const CLOSED_DATES = ['2026-09-19'];
 
   function ymd(d) {
     return d.getFullYear() + '-' +
